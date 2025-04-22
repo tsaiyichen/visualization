@@ -4,9 +4,9 @@ region_dictionary = {
     '臺北市': "Taipei City",
     '新北市': "New Taipei City",
     '基隆市': "Keelung City",
-    '桃園市': 'Taoyuan City',
+    '桃園市': 'Taoyuan',
     '新竹縣': 'Hsinchu',
-    '新竹市': 'Hsinchu city',
+    '新竹市': 'Hsinchu City',
     '苗栗縣': 'Miaoli',
     '臺中市': 'Taichung City',
     '彰化縣': "Changhua",
@@ -39,7 +39,7 @@ df.columns = [1, 2, 3, 'total']
 df = df.replace(',', '', regex=True)
 df = df.astype(int)
 df['name'] = df.index.map(region_dictionary)
-
+print(df)
 gdf = gpd.read_file('data/tw.json')
 df = gdf.merge(df, on='name')
 df.set_index('name', inplace=True)
