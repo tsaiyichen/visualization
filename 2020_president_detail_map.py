@@ -52,7 +52,7 @@ print(gdf.winner_percentage)
 
 fig, ax = plt.subplots(figsize=(8, 10))
 gdf.plot(ax=ax, color=gdf['color'], edgecolor='black')
-plt.title('2016 總統選舉：勝選候選人+得票深淺熱力圖', fontsize=20)
+plt.title('2020 總統選舉：勝選候選人+得票深淺熱力圖', fontsize=20)
 ax.axis('off')
 
 from matplotlib.patches import Patch
